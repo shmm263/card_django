@@ -1,1 +1,1 @@
-web: gunicorn card.wsgi:application --preload
+web: gunicorn card.wsgi --log-file -
