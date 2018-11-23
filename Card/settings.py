@@ -29,8 +29,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'xt$texu#h=5uz3pydwyb1d7phi@ck&
 #DEBUG = True
 DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
-ALLOWED_HOSTS = ['cards-medical.herokuapp.com','127.0.0.1']
-
+ALLOWED_HOSTS = ['evening-oasis-25118.herokuapp.com','cards-medical.herokuapp.com','127.0.0.1']
 
 # Application definition
 
