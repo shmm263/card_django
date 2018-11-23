@@ -83,7 +83,7 @@ class Patient(models.Model):
     addr_corpus = models.CharField(verbose_name='Корпус',max_length=5,default=0)
     addr_room = models.CharField(verbose_name='Квартира',max_length=5,default=0)
     addr_index = models.CharField(verbose_name='Индекс',max_length=5)
-    date_update=models.DateTimeField(default=datetime.now, blank=True)
+    date_update=models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["first_name"]
@@ -129,7 +129,7 @@ class MedExamination(models.Model):
     patient_status= models.CharField(verbose_name='Статус', max_length=3, choices=status_id, blank=True,
                                                    default='Нет', help_text="Введите статус уведомления")
     dat_end = models.DateField(verbose_name='Дата действия справки',default=datetime.now()+timedelta(days=731))
-    date_update = models.DateTimeField(default=datetime.now, blank=True)
+    date_update = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["-id"]
