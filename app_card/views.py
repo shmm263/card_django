@@ -78,7 +78,7 @@ def medexamination_update_status(request, pk):
             # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
             #book_inst.due_back = form.cleaned_data['renewal_date']
             mde_inst.patient_status = form.cleaned_data['renewal_status']
-            mde_inst.date_update= datetime.date.today()
+            #mde_inst.date_update= datetime.date.today()
             mde_inst.save()
             return HttpResponseRedirect(reverse('people1'))
     else:
