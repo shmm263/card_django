@@ -38,7 +38,7 @@ class PatientListView(generic.ListView):
 
 class PatientDetailView(generic.DetailView):
  model = Patient
-template_name = 'app_card/Patient_detail.html'
+ template_name = 'app_card/patient_details.html'
 
 #class LoanedPatientByDateListView(generic.ListView):
  #model = Patient
