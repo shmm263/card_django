@@ -25,10 +25,10 @@ class LookupRajonAdmin(admin.ModelAdmin):
 
 class PatientAdmin(admin.ModelAdmin):
   # form = MyPatientForm
-   list_display = ('first_name', 'last_name', 'date_birthday','region','inn')
+   list_display = ('first_name', 'last_name', 'date_birthday','region','inn','email')
    exclude = ['date_update']
    list_filter = ['last_name', 'first_name','region']
-   search_fields = ['first_name','inn']
+   search_fields = ['first_name','inn', 'email']
    autocomplete_fields = ['rajon']
    # Register the admin class with the associated model
 
@@ -40,6 +40,6 @@ class MedExaminationAdmin(admin.ModelAdmin):
     list_display = ('patient', 'date_medical_examination','purpose_medical_examination','dat_end')
     exclude = ['date_update']
     list_filter = ['date_medical_examination']
-    search_fields = ['patient']
+    search_fields = ['patient__first_name']
     autocomplete_fields = ['patient']
 
