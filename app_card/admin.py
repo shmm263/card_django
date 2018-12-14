@@ -40,6 +40,6 @@ class MedExaminationAdmin(admin.ModelAdmin):
     list_display = ('patient', 'date_medical_examination','purpose_medical_examination','dat_end')
     exclude = ['date_update']
     list_filter = ['date_medical_examination']
-    search_fields = ['patient__first_name']
+    search_fields = ['patient__first_name', 'patient__email']
     autocomplete_fields = ['patient']
 

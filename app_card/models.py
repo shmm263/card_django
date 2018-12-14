@@ -97,7 +97,7 @@ class Patient(models.Model):
         String for representing the Model object (in Admin site etc.)
         """
         # rajon_id = LookupRajon.objects.filter(region_id__regions__contains='Киевская')
-        return '%s %s %s' % (self.first_name, self.last_name, self.patron_name)
+        return '%s %s %s, %s' % (self.first_name, self.last_name, self.patron_name, self.email)
 
     def get_absolute_url(self):
         """
